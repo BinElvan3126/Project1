@@ -8,6 +8,8 @@
 #include <cstring>
 #include <chrono>
 
+#define MAX 100000
+
 using namespace std;
 
 void readFromFile(const char* filename, int a[], int &n);
@@ -27,6 +29,8 @@ void mergeSort(int a[], int left, int right);
 
 int partition(int a[], int low, int high);
 void quickSort(int a[], int low, int high);
+
+void countingSort(int a[], int n);
 
 
 
