@@ -1,4 +1,4 @@
-// Project 1
+// Project 1 UPD 12:07
 
 #include "function.h"
 
