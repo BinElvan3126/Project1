@@ -1,6 +1,6 @@
 // Project 1 UPD 12:07
 
-// g++ main.cpp file.cpp bubble-sort.cpp insertion-sort.cpp selection-sort.cpp -o main.exe
+// g++ main.cpp file.cpp bubble-sort.cpp insertion-sort.cpp selection-sort.cpp merge-sort.cpp quick-sort.cpp heap-sort.cpp shell-sort.cpp shaker-sort.cpp counting-sort.cpp radix-sort.cpp flash-sort.cpp -o main.exe
 
 // main.exe -a selection-sort -i input.txt -o output.txt
 
@@ -44,6 +44,30 @@ int main(int argc, char* argv[])
     }
     else if (strcmp(arg, "bubble-sort") == 0) {
         bubbleSort(a, n);
+    }
+    else if (strcmp(arg, "shaker-sort") == 0) {
+        shakerSort(a, n);
+    }
+    else if (strcmp(arg, "shell-sort") == 0) {
+        shellSort(a, n);
+    }
+    else if (strcmp(arg, "heap-sort") == 0) {
+        heapSort(a, n);
+    }
+    else if (strcmp(arg, "merge-sort") == 0) {
+        mergeSort(a, 0, n - 1);
+    }
+    else if (strcmp(arg, "quick-sort") == 0) {
+        quickSort(a, 0, n - 1);
+    }
+    else if (strcmp(arg, "counting-sort") == 0) {
+        countingSort(a, n);
+    }
+    else if (strcmp(arg, "radix-sort") == 0) {
+        // radixSort
+    }
+    else if (strcmp(arg, "flash-sort") == 0) {
+        // flashSort
     }
     else {
         cout << "Not found algorithm";
