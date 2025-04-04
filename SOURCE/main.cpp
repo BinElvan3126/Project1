@@ -8,6 +8,7 @@
 
 int main(int argc, char* argv[]) 
 {
+    auto start = std::chrono::high_resolution_clock::now();
     const char* input = "input.txt";
     const char* output = "output.txt";
     char* arg;
@@ -48,7 +49,10 @@ int main(int argc, char* argv[])
         cout << "Not found algorithm";
         return 1;
     }
-
+    
     writeToFile(output, a, n);
+    auto end = chrono::high_resolution_clock::now();
+    auto duration = chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    cout << "Thoi gian thuc thi: " << duration.count() << " ms" << endl;
     return 0;
 }

@@ -3,7 +3,6 @@
 void selectionSort(int a[], int n) 
 {
     int count = 0;
-    auto start = std::chrono::high_resolution_clock::now();
     int min;
     for (int i = 0; i < n; i++) {
         min = i;
@@ -17,10 +16,6 @@ void selectionSort(int a[], int n)
             a[i] = temp;
         }
     }
-
-    auto end = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<std::chrono::milliseconds>(end - start);
-    cout << "Thoi gian thuc thi: " << duration.count() << " ms" << endl;
     cout << "So phep so sanh: " << count << endl;
 
 }
