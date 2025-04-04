@@ -1,4 +1,4 @@
-#include "function.h"
+#include "head.h"
 
 void readFromFile(const char* filename, int a[], int &n) 
 {

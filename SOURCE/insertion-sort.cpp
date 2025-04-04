@@ -1,4 +1,4 @@
-#include "function.h"
+#include "head.h"
 
 void insertionSort(int a[], int n)  
 {  

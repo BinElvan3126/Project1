@@ -4,7 +4,7 @@
 
 // main.exe -a selection-sort -i input.txt -o output.txt
 
-#include "function.h"
+#include "head.h"
 
 int main(int argc, char* argv[]) 
 {
