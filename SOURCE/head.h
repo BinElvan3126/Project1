@@ -19,4 +19,15 @@ void bubbleSort(int a[], int n);
 void shakerSort(int a[], int n);
 void shellSort(int a[], int n);
 
+void heapify(int a[], int n, int i);
+void heapSort(int a[], int n);
+
+void merge(int a[], int left, int mid, int right);
+void mergeSort(int a[], int left, int right);
+
+int partition(int a[], int low, int high);
+void quickSort(int a[], int low, int high);
+
+
+
 #endif 
