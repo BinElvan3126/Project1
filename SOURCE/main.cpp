@@ -1,5 +1,9 @@
 // Project 1 UPD 12:07
 
+// g++ main.cpp file.cpp bubble-sort.cpp insertion-sort.cpp selection-sort.cpp -o main.exe
+
+// main.exe -a selection-sort -i input.txt -o output.txt
+
 #include "function.h"
 
 int main(int argc, char* argv[]) 
@@ -7,16 +11,17 @@ int main(int argc, char* argv[])
     const char* input = "input.txt";
     const char* output = "output.txt";
     char* arg;
+    const int MAX_SIZE = 100000;
 
     for (int i = 1; i < argc; i++) {
         if (strcmp(argv[i], "-a") == 0 && i + 1 < argc) {
-            arg = argv[i++];
+            arg = argv[++i];
         }
         else if (strcmp(argv[i], "-i") == 0 && i + 1 < argc) {
-            input = argv[i++];
+            input = argv[++i];
         }
         else if (strcmp(argv[i], "-o") == 0 && i + 1 < argc) {
-            output = argv[i++];
+            output = argv[++i];
         }
     }
 
@@ -25,7 +30,7 @@ int main(int argc, char* argv[])
         return 1;
     }
 
-    int a[100000];
+    int a[MAX_SIZE];
     int n = 0;
 
     readFromFile(input, a, n);

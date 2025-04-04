@@ -1,6 +1,6 @@
 #include "function.h"
 
-void readFromFile(const char* filename, int a[], int n) 
+void readFromFile(const char* filename, int a[], int &n) 
 {
     ifstream inFile(filename);
     if (!inFile.is_open()) {
