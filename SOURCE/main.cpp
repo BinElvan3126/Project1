@@ -35,48 +35,48 @@ int main(int argc, char* argv[])
     int n = 0;
 
     readFromFile(input, a, n);
-
+    cout<<"Tong so phep so sanh: ";
     if (strcmp(arg, "selection-sort") == 0) {
-        selectionSort(a, n);
+        cout<<selectionSort(a, n)<<endl;
     }
     else if (strcmp(arg, "insertion-sort") == 0) {
-        insertionSort(a, n);
+        cout<<insertionSort(a, n)<<endl;
     }
     else if (strcmp(arg, "bubble-sort") == 0) {
-        bubbleSort(a, n);
+        cout<<bubbleSort(a, n)<<endl;
     }
     else if (strcmp(arg, "shaker-sort") == 0) {
-        shakerSort(a, n);
+        cout<<shakerSort(a, n)<<endl;
     }
     else if (strcmp(arg, "shell-sort") == 0) {
-        shellSort(a, n);
+        cout<<shellSort(a, n)<<endl;
     }
     else if (strcmp(arg, "heap-sort") == 0) {
-        heapSort(a, n);
+        cout<<heapSort(a, n)<<endl;
     }
     else if (strcmp(arg, "merge-sort") == 0) {
-        mergeSort(a, 0, n - 1);
+        cout<<mergeSort(a, 0, n - 1)<<endl;
     }
     else if (strcmp(arg, "quick-sort") == 0) {
-        quickSort(a, 0, n - 1);
+        cout<<quickSort(a, 0, n - 1)<<endl;
     }
     else if (strcmp(arg, "counting-sort") == 0) {
-        countingSort(a, n);
+        cout<<countingSort(a, n)<<endl;
     }
     else if (strcmp(arg, "radix-sort") == 0) {
-        // radixSort
+        cout<<radixSort(a,n)<<endl;
     }
     else if (strcmp(arg, "flash-sort") == 0) {
         // flashSort
     }
     else {
         cout << "Not found algorithm";
-        return 1;
+        return -1;
     }
     
     writeToFile(output, a, n);
     auto end = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    auto duration = chrono::duration_cast<std::chrono::seconds>(end - start);
     cout << "Thoi gian thuc thi: " << duration.count() << " ms" << endl;
     return 0;
 }

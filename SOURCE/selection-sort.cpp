@@ -1,8 +1,8 @@
 #include "head.h"
 
-void selectionSort(int a[], int n) 
+long long selectionSort(int a[], int n) 
 {
-    int count = 0;
+    long long count = 0;
     int min;
     for (int i = 0; i < n; i++) {
         min = i;
@@ -18,5 +18,5 @@ void selectionSort(int a[], int n)
             a[i] = temp;
         }
     }
-    cout << "So phep so sanh: " << count << endl;
+    return count;
 }

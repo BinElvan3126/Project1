@@ -1,13 +1,13 @@
 #include "head.h"
 
-void merge(int a[], int left, int mid, int right) 
+long long merge(int a[], int left, int mid, int right) 
 {
-    int i = left;
-    int j = mid + 1;
-    int k = 0;
+    long long tempCount = 0;
+    int i,j,k;
+    i=left, j=mid+1, k=0;
     int temp[right - left + 1];
-
     while (i <= mid && j <= right) {
+        tempCount++;
         if(a[i] <= a[j]) {
             temp[k++] = a[i++];
         }else {
@@ -20,18 +20,20 @@ void merge(int a[], int left, int mid, int right)
     while (j <= right) {
         temp[k++] = a[j++];
     }
-
-    for (int idx = 0; idx < k; idx++) {
-        a[left + idx] = temp[idx];
+    for (int i = 0; i < k; i++) {
+        a[left + i] = temp[i];
     }
+    return tempCount;
 }
-void mergeSort(int a[], int left, int right) 
+long long mergeSort(int a[], int left, int right) 
 {
+    long long count = 0;
     if (left < right) {
         int mid = left + (right - left) / 2;
-        mergeSort(a, left, mid);
-        mergeSort(a, mid + 1, right);
-        merge(a, left, mid, right);
+        count+=mergeSort(a, left, mid);
+        count+=mergeSort(a, mid + 1, right);
+        count+=merge(a, left, mid, right);
     }
+    return count;
 }
 
