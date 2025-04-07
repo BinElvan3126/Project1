@@ -3,6 +3,16 @@
 // g++ main.cpp file.cpp bubble-sort.cpp insertion-sort.cpp selection-sort.cpp merge-sort.cpp quick-sort.cpp heap-sort.cpp shell-sort.cpp shaker-sort.cpp counting-sort.cpp radix-sort.cpp flash-sort.cpp -o main.exe
 
 // main.exe -a selection-sort -i input.txt -o output.txt
+// main.exe -a insertion-sort -i input.txt -o output.txt
+// main.exe -a bubble-sort -i input.txt -o output.txt
+// main.exe -a shaker-sort -i input.txt -o output.txt
+// main.exe -a shell-sort -i input.txt -o output.txt
+// main.exe -a heap-sort -i input.txt -o output.txt
+// main.exe -a merge-sort -i input.txt -o output.txt
+// main.exe -a quick-sort -i input.txt -o output.txt
+// main.exe -a counting-sort -i input.txt -o output.txt
+// main.exe -a radix-sort -i input.txt -o output.txt
+// main.exe -a flash-sort -i input.txt -o output.txt
 
 #include "head.h"
 

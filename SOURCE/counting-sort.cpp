@@ -11,7 +11,7 @@ long long countingSort(int a[], int n)
       if (a[i] > max)
         max = a[i];
     }
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n;i++) {
       count[a[i]]++;
     }
  
