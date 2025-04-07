@@ -76,7 +76,7 @@ int main(int argc, char* argv[])
     
     writeToFile(output, a, n);
     auto end = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<std::chrono::seconds>(end - start);
+    auto duration = chrono::duration_cast<std::chrono::milliseconds>(end - start);
     cout << "Thoi gian thuc thi: " << duration.count() << " ms" << endl;
     return 0;
 }
