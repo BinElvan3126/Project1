@@ -67,11 +67,11 @@ int main(int argc, char* argv[])
         cout<<radixSort(a,n)<<endl;
     }
     else if (strcmp(arg, "flash-sort") == 0) {
-        // flashSort
+        cout<<flashSort(a,n)<<endl;
     }
     else {
         cout << "Not found algorithm";
-        return -1;
+        return 1;
     }
     
     writeToFile(output, a, n);
