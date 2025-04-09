@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
     int n = 0;
 
     readFromFile(input, a, n);
-    cout << "Tong so phep so sanh: ";
+
     if (strcmp(arg, "selection-sort") == 0)
     {
         selectionSort(a, n);
