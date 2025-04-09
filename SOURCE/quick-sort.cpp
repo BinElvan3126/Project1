@@ -1,17 +1,16 @@
 #include "head.h"
 
-long long quickSort(int a[], int left, int right) {
-    long long count = 0;
+void quickSort(int a[], int left, int right) {
     int i = left, j = right;
     if(left>=right){
-        return 0;
+        return;
     }
     int pivot = a[left + rand()%(right - left+1)];
     while (i <= j){
-        while(++count &&a[i] < pivot){
+        while(a[i] < pivot){
             i++;
         }
-        while(++count &&a[j] > pivot){
+        while(a[j] > pivot){
             j--;
         }
         if(i <= j){
@@ -21,10 +20,9 @@ long long quickSort(int a[], int left, int right) {
         }
     }
     if(left < j){
-        count+=quickSort(a, left, j);
+        quickSort(a, left, j);
     }
     if(i < right){
-        count+=quickSort(a, i, right);
+        quickSort(a, i, right);
     }
-    return count;
 }

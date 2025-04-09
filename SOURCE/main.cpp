@@ -13,7 +13,8 @@
 // main.exe -a counting-sort -i input.txt -o output.txt
 // main.exe -a radix-sort -i input.txt -o output.txt
 // main.exe -a flash-sort -i input.txt -o output.txt
-
+// MSSV:24120036 - LE VAN THANH DAT
+// MSSV:24120064 - TRUONG DINH NHAT HUY
 #include "head.h"
 
 int main(int argc, char* argv[]) 
@@ -47,46 +48,42 @@ int main(int argc, char* argv[])
     readFromFile(input, a, n);
     cout<<"Tong so phep so sanh: ";
     if (strcmp(arg, "selection-sort") == 0) {
-        cout<<selectionSort(a, n)<<endl;
+        selectionSort(a, n);
     }
     else if (strcmp(arg, "insertion-sort") == 0) {
-        cout<<insertionSort(a, n)<<endl;
+        insertionSort(a, n);
     }
     else if (strcmp(arg, "bubble-sort") == 0) {
-        cout<<bubbleSort(a, n)<<endl;
+        bubbleSort(a, n);
     }
     else if (strcmp(arg, "shaker-sort") == 0) {
-        cout<<shakerSort(a, n)<<endl;
+        shakerSort(a, n);
     }
     else if (strcmp(arg, "shell-sort") == 0) {
-        cout<<shellSort(a, n)<<endl;
+        shellSort(a, n);
     }
     else if (strcmp(arg, "heap-sort") == 0) {
-        cout<<heapSort(a, n)<<endl;
+        heapSort(a, n);
     }
     else if (strcmp(arg, "merge-sort") == 0) {
-        cout<<mergeSort(a, 0, n - 1)<<endl;
+        mergeSort(a, 0, n - 1);
     }
     else if (strcmp(arg, "quick-sort") == 0) {
-        cout<<quickSort(a, 0, n - 1)<<endl;
+        quickSort(a, 0, n - 1);
     }
     else if (strcmp(arg, "counting-sort") == 0) {
-        cout<<countingSort(a, n)<<endl;
+        countingSort(a, n);
     }
     else if (strcmp(arg, "radix-sort") == 0) {
-        cout<<radixSort(a,n)<<endl;
+        radixSort(a,n);
     }
     else if (strcmp(arg, "flash-sort") == 0) {
-        cout<<flashSort(a,n)<<endl;
+        flashSort(a,n);
     }
     else {
         cout << "Not found algorithm";
         return 1;
-    }
-    
+    } 
     writeToFile(output, a, n);
-    auto end = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<std::chrono::milliseconds>(end - start);
-    cout << "Thoi gian thuc thi: " << duration.count() << " ms" << endl;
     return 0;
 }
